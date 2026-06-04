@@ -173,15 +173,8 @@ export default function App() {
         <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item" href="https://alexis-carbillet.com" target="_blank" rel="noreferrer">
-              alexis-carbillet.com
+              main website
             </a>
-          </div>
-          <div className="navbar-menu">
-            <div className="navbar-end">
-              <a className="navbar-item" href="#duolingo">Duolingo</a>
-              <a className="navbar-item" href="#github">GitHub</a>
-              <a className="navbar-item" href="https://alexis-carbillet.com">Main site</a>
-            </div>
           </div>
         </div>
       </nav>

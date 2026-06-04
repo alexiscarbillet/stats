@@ -34,6 +34,19 @@ strong, b, .has-text-weight-bold {
   font-weight: 700;
 }
 
+/* Make card header titles (e.g., "Duolingo", "GitHub") clearly visible */
+.card-header-title {
+  color: var(--text) !important;
+}
+
+/* Ensure navbar links (Duolingo/GitHub anchors) are visible */
+.navbar .navbar-item, .navbar .navbar-link {
+  color: #000000 !important;
+}
+.navbar .navbar-item:hover, .navbar .navbar-link:hover {
+  color: rgba(0,0,0,0.85) !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root { --bg: #ffffff; --text: #213547; --muted: #66788a; --card-bg: #ffffff; --accent: #646cff; }
   .card { background: #ffffff; }
