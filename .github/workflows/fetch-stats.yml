@@ -1,0 +1,36 @@
+name: Fetch stats
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Run fetch script
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        run: |
+          node scripts/fetch_stats.js
+      - name: Install frontend dependencies
+        run: |
+          cd web
+          npm install
+      - name: Build frontend
+        run: |
+          cd web
+          npm run build
+      - name: Commit data and site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git commit -m "Update stats data and site" || echo "No changes to commit"
+          git push

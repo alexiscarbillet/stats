@@ -1,0 +1,42 @@
+:root {
+  --bg: #242424;
+  --text: rgba(255,255,255,0.87);
+  --muted: rgba(255,255,255,0.7);
+  --card-bg: #1a1a1a;
+  --accent: #61dafb;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root { min-height: 100vh; }
+.section { padding-top: 2rem; padding-bottom: 2rem; }
+.card { background: var(--card-bg); border-radius: 8px; color: var(--text); }
+.top-card { min-height: auto; }
+.navbar { background: var(--card-bg); border-bottom: 1px solid rgba(255,255,255,0.04); }
+.navbar .navbar-item { color: var(--text); }
+.navbar .navbar-item:hover { color: var(--accent); }
+.footer { background: transparent; border-top: 1px solid rgba(255,255,255,0.04); padding: 2rem 0; color: var(--muted); }
+.progress { margin-bottom: 0.75rem; }
+.course-progress { display: flex; justify-content: space-between; align-items: center; }
+.course-progress p { margin: 0; }
+
+/* Make links and tags visible on dark bg */
+a { color: var(--accent); }
+.tag { background: rgba(255,255,255,0.06); color: var(--text); }
+
+/* Ensure bold text remains high-contrast on dark backgrounds */
+strong, b, .has-text-weight-bold {
+  color: var(--text) !important;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  :root { --bg: #ffffff; --text: #213547; --muted: #66788a; --card-bg: #ffffff; --accent: #646cff; }
+  .card { background: #ffffff; }
+  .navbar { background: #ffffff; }
+  .footer { background: #ffffff; }
+}
