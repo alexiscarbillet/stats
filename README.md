@@ -1,6 +1,6 @@
 # stats.alexis-carbillet.com
 
-Scaffold for fetching and displaying personal stats (Chess.com, Duolingo, GitHub).
+Scaffold for fetching and displaying personal stats (Duolingo, GitHub).
 
 Overview
 - Server-side fetches run in GitHub Actions and write JSON to `data/` and `web/public/data/`.
