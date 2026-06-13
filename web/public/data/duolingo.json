@@ -14,19 +14,7 @@
         "placementTestAvailable": false,
         "preload": false,
         "title": "Spanish",
-        "xp": 37612,
-        "crowns": 9999
-      },
-      {
-        "authorId": "duolingo",
-        "fromLanguage": "en",
-        "healthEnabled": true,
-        "id": "DUOLINGO_RU_EN",
-        "learningLanguage": "ru",
-        "placementTestAvailable": false,
-        "preload": false,
-        "title": "Russian",
-        "xp": 98004,
+        "xp": 37742,
         "crowns": 9999
       },
       {
@@ -39,6 +27,18 @@
         "preload": false,
         "title": "Italian",
         "xp": 15344,
+        "crowns": 9999
+      },
+      {
+        "authorId": "duolingo",
+        "fromLanguage": "en",
+        "healthEnabled": true,
+        "id": "DUOLINGO_RU_EN",
+        "learningLanguage": "ru",
+        "placementTestAvailable": false,
+        "preload": false,
+        "title": "Russian",
+        "xp": 98070,
         "crowns": 9999
       }
     ],
@@ -61,12 +61,12 @@
       "users"
     ],
     "canUseModerationTools": false,
-    "streak": 1234,
+    "streak": 1235,
     "streakData": {
       "currentStreak": {
-        "length": 1234,
+        "length": 1235,
         "startDate": "2022-12-24",
-        "endDate": "2026-06-11"
+        "endDate": "2026-06-12"
       }
     },
     "username": "alexis_carbillet",
@@ -79,7 +79,7 @@
     "requiresSsoLogin": false,
     "hasPhoneNumber": true,
     "shouldForceConnectPhoneNumber": false,
-    "totalXp": 150960,
+    "totalXp": 151156,
     "achievements": [],
     "_achievements": [],
     "betaStatus": "INELIGIBLE",
@@ -103,19 +103,7 @@
             "placementTestAvailable": false,
             "preload": false,
             "title": "Spanish",
-            "xp": 37612,
-            "crowns": 9999
-          },
-          {
-            "authorId": "duolingo",
-            "fromLanguage": "en",
-            "healthEnabled": true,
-            "id": "DUOLINGO_RU_EN",
-            "learningLanguage": "ru",
-            "placementTestAvailable": false,
-            "preload": false,
-            "title": "Russian",
-            "xp": 98004,
+            "xp": 37742,
             "crowns": 9999
           },
           {
@@ -128,6 +116,18 @@
             "preload": false,
             "title": "Italian",
             "xp": 15344,
+            "crowns": 9999
+          },
+          {
+            "authorId": "duolingo",
+            "fromLanguage": "en",
+            "healthEnabled": true,
+            "id": "DUOLINGO_RU_EN",
+            "learningLanguage": "ru",
+            "placementTestAvailable": false,
+            "preload": false,
+            "title": "Russian",
+            "xp": 98070,
             "crowns": 9999
           }
         ],
@@ -150,12 +150,12 @@
           "users"
         ],
         "canUseModerationTools": false,
-        "streak": 1234,
+        "streak": 1235,
         "streakData": {
           "currentStreak": {
-            "length": 1234,
+            "length": 1235,
             "startDate": "2022-12-24",
-            "endDate": "2026-06-11"
+            "endDate": "2026-06-12"
           }
         },
         "username": "alexis_carbillet",
@@ -168,7 +168,7 @@
         "requiresSsoLogin": false,
         "hasPhoneNumber": true,
         "shouldForceConnectPhoneNumber": false,
-        "totalXp": 150960,
+        "totalXp": 151156,
         "achievements": [],
         "_achievements": [],
         "betaStatus": "INELIGIBLE",
@@ -177,5 +177,5 @@
       }
     ]
   },
-  "fetched_at": "2026-06-12T09:56:51.937Z"
+  "fetched_at": "2026-06-13T08:46:43.534Z"
 }
