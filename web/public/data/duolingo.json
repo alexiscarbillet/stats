@@ -14,7 +14,7 @@
         "placementTestAvailable": false,
         "preload": false,
         "title": "Spanish",
-        "xp": 37742,
+        "xp": 37892,
         "crowns": 9999
       },
       {
@@ -26,7 +26,7 @@
         "placementTestAvailable": false,
         "preload": false,
         "title": "Italian",
-        "xp": 15344,
+        "xp": 15514,
         "crowns": 9999
       },
       {
@@ -38,7 +38,7 @@
         "placementTestAvailable": false,
         "preload": false,
         "title": "Russian",
-        "xp": 98070,
+        "xp": 98162,
         "crowns": 9999
       }
     ],
@@ -61,12 +61,12 @@
       "users"
     ],
     "canUseModerationTools": false,
-    "streak": 1235,
+    "streak": 1236,
     "streakData": {
       "currentStreak": {
-        "length": 1235,
+        "length": 1236,
         "startDate": "2022-12-24",
-        "endDate": "2026-06-12"
+        "endDate": "2026-06-13"
       }
     },
     "username": "alexis_carbillet",
@@ -79,7 +79,7 @@
     "requiresSsoLogin": false,
     "hasPhoneNumber": true,
     "shouldForceConnectPhoneNumber": false,
-    "totalXp": 151156,
+    "totalXp": 151568,
     "achievements": [],
     "_achievements": [],
     "betaStatus": "INELIGIBLE",
@@ -103,7 +103,7 @@
             "placementTestAvailable": false,
             "preload": false,
             "title": "Spanish",
-            "xp": 37742,
+            "xp": 37892,
             "crowns": 9999
           },
           {
@@ -115,7 +115,7 @@
             "placementTestAvailable": false,
             "preload": false,
             "title": "Italian",
-            "xp": 15344,
+            "xp": 15514,
             "crowns": 9999
           },
           {
@@ -127,7 +127,7 @@
             "placementTestAvailable": false,
             "preload": false,
             "title": "Russian",
-            "xp": 98070,
+            "xp": 98162,
             "crowns": 9999
           }
         ],
@@ -150,12 +150,12 @@
           "users"
         ],
         "canUseModerationTools": false,
-        "streak": 1235,
+        "streak": 1236,
         "streakData": {
           "currentStreak": {
-            "length": 1235,
+            "length": 1236,
             "startDate": "2022-12-24",
-            "endDate": "2026-06-12"
+            "endDate": "2026-06-13"
           }
         },
         "username": "alexis_carbillet",
@@ -168,7 +168,7 @@
         "requiresSsoLogin": false,
         "hasPhoneNumber": true,
         "shouldForceConnectPhoneNumber": false,
-        "totalXp": 151156,
+        "totalXp": 151568,
         "achievements": [],
         "_achievements": [],
         "betaStatus": "INELIGIBLE",
@@ -177,5 +177,5 @@
       }
     ]
   },
-  "fetched_at": "2026-06-13T08:46:43.534Z"
+  "fetched_at": "2026-06-14T09:18:36.641Z"
 }
