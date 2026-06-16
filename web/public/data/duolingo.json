@@ -9,6 +9,18 @@
         "authorId": "duolingo",
         "fromLanguage": "en",
         "healthEnabled": true,
+        "id": "DUOLINGO_ES_EN",
+        "learningLanguage": "es",
+        "placementTestAvailable": false,
+        "preload": false,
+        "title": "Spanish",
+        "xp": 38164,
+        "crowns": 9999
+      },
+      {
+        "authorId": "duolingo",
+        "fromLanguage": "en",
+        "healthEnabled": true,
         "id": "DUOLINGO_IT_EN",
         "learningLanguage": "it",
         "placementTestAvailable": false,
@@ -28,25 +40,13 @@
         "title": "Russian",
         "xp": 98302,
         "crowns": 9999
-      },
-      {
-        "authorId": "duolingo",
-        "fromLanguage": "en",
-        "healthEnabled": true,
-        "id": "DUOLINGO_ES_EN",
-        "learningLanguage": "es",
-        "placementTestAvailable": false,
-        "preload": false,
-        "title": "Spanish",
-        "xp": 37992,
-        "crowns": 9999
       }
     ],
     "fromLanguage": "en",
     "joinedClassroomIds": [],
     "classroomLeaderboardsEnabled": false,
-    "learningLanguage": "it",
-    "currentCourseId": "DUOLINGO_IT_EN",
+    "learningLanguage": "es",
+    "currentCourseId": "DUOLINGO_ES_EN",
     "motivation": "family",
     "name": "alexis",
     "observedClassroomIds": [],
@@ -79,7 +79,7 @@
     "requiresSsoLogin": false,
     "hasPhoneNumber": true,
     "shouldForceConnectPhoneNumber": false,
-    "totalXp": 151988,
+    "totalXp": 152160,
     "achievements": [],
     "_achievements": [],
     "betaStatus": "INELIGIBLE",
@@ -94,6 +94,18 @@
         "resurrectedAcquisitionSurveyReason": "none",
         "bio": "",
         "courses": [
+          {
+            "authorId": "duolingo",
+            "fromLanguage": "en",
+            "healthEnabled": true,
+            "id": "DUOLINGO_ES_EN",
+            "learningLanguage": "es",
+            "placementTestAvailable": false,
+            "preload": false,
+            "title": "Spanish",
+            "xp": 38164,
+            "crowns": 9999
+          },
           {
             "authorId": "duolingo",
             "fromLanguage": "en",
@@ -117,25 +129,13 @@
             "title": "Russian",
             "xp": 98302,
             "crowns": 9999
-          },
-          {
-            "authorId": "duolingo",
-            "fromLanguage": "en",
-            "healthEnabled": true,
-            "id": "DUOLINGO_ES_EN",
-            "learningLanguage": "es",
-            "placementTestAvailable": false,
-            "preload": false,
-            "title": "Spanish",
-            "xp": 37992,
-            "crowns": 9999
           }
         ],
         "fromLanguage": "en",
         "joinedClassroomIds": [],
         "classroomLeaderboardsEnabled": false,
-        "learningLanguage": "it",
-        "currentCourseId": "DUOLINGO_IT_EN",
+        "learningLanguage": "es",
+        "currentCourseId": "DUOLINGO_ES_EN",
         "motivation": "family",
         "name": "alexis",
         "observedClassroomIds": [],
@@ -168,7 +168,7 @@
         "requiresSsoLogin": false,
         "hasPhoneNumber": true,
         "shouldForceConnectPhoneNumber": false,
-        "totalXp": 151988,
+        "totalXp": 152160,
         "achievements": [],
         "_achievements": [],
         "betaStatus": "INELIGIBLE",
@@ -177,5 +177,5 @@
       }
     ]
   },
-  "fetched_at": "2026-06-15T11:46:14.195Z"
+  "fetched_at": "2026-06-16T10:54:08.789Z"
 }
