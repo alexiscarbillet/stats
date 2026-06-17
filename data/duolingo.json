@@ -9,12 +9,12 @@
         "authorId": "duolingo",
         "fromLanguage": "en",
         "healthEnabled": true,
-        "id": "DUOLINGO_ES_EN",
-        "learningLanguage": "es",
+        "id": "DUOLINGO_IT_EN",
+        "learningLanguage": "it",
         "placementTestAvailable": false,
         "preload": false,
-        "title": "Spanish",
-        "xp": 38314,
+        "title": "Italian",
+        "xp": 15895,
         "crowns": 9999
       },
       {
@@ -26,27 +26,27 @@
         "placementTestAvailable": false,
         "preload": false,
         "title": "Russian",
-        "xp": 98322,
+        "xp": 98392,
         "crowns": 9999
       },
       {
         "authorId": "duolingo",
         "fromLanguage": "en",
         "healthEnabled": true,
-        "id": "DUOLINGO_IT_EN",
-        "learningLanguage": "it",
+        "id": "DUOLINGO_ES_EN",
+        "learningLanguage": "es",
         "placementTestAvailable": false,
         "preload": false,
-        "title": "Italian",
-        "xp": 15727,
+        "title": "Spanish",
+        "xp": 38314,
         "crowns": 9999
       }
     ],
     "fromLanguage": "en",
     "joinedClassroomIds": [],
     "classroomLeaderboardsEnabled": false,
-    "learningLanguage": "es",
-    "currentCourseId": "DUOLINGO_ES_EN",
+    "learningLanguage": "it",
+    "currentCourseId": "DUOLINGO_IT_EN",
     "motivation": "family",
     "name": "alexis",
     "observedClassroomIds": [],
@@ -61,12 +61,12 @@
       "users"
     ],
     "canUseModerationTools": false,
-    "streak": 1239,
+    "streak": 1240,
     "streakData": {
       "currentStreak": {
-        "length": 1239,
+        "length": 1240,
         "startDate": "2022-12-24",
-        "endDate": "2026-06-16"
+        "endDate": "2026-06-17"
       }
     },
     "username": "alexis_carbillet",
@@ -79,7 +79,7 @@
     "requiresSsoLogin": false,
     "hasPhoneNumber": true,
     "shouldForceConnectPhoneNumber": false,
-    "totalXp": 152363,
+    "totalXp": 152601,
     "achievements": [],
     "_achievements": [],
     "betaStatus": "INELIGIBLE",
@@ -98,12 +98,12 @@
             "authorId": "duolingo",
             "fromLanguage": "en",
             "healthEnabled": true,
-            "id": "DUOLINGO_ES_EN",
-            "learningLanguage": "es",
+            "id": "DUOLINGO_IT_EN",
+            "learningLanguage": "it",
             "placementTestAvailable": false,
             "preload": false,
-            "title": "Spanish",
-            "xp": 38314,
+            "title": "Italian",
+            "xp": 15895,
             "crowns": 9999
           },
           {
@@ -115,27 +115,27 @@
             "placementTestAvailable": false,
             "preload": false,
             "title": "Russian",
-            "xp": 98322,
+            "xp": 98392,
             "crowns": 9999
           },
           {
             "authorId": "duolingo",
             "fromLanguage": "en",
             "healthEnabled": true,
-            "id": "DUOLINGO_IT_EN",
-            "learningLanguage": "it",
+            "id": "DUOLINGO_ES_EN",
+            "learningLanguage": "es",
             "placementTestAvailable": false,
             "preload": false,
-            "title": "Italian",
-            "xp": 15727,
+            "title": "Spanish",
+            "xp": 38314,
             "crowns": 9999
           }
         ],
         "fromLanguage": "en",
         "joinedClassroomIds": [],
         "classroomLeaderboardsEnabled": false,
-        "learningLanguage": "es",
-        "currentCourseId": "DUOLINGO_ES_EN",
+        "learningLanguage": "it",
+        "currentCourseId": "DUOLINGO_IT_EN",
         "motivation": "family",
         "name": "alexis",
         "observedClassroomIds": [],
@@ -150,12 +150,12 @@
           "users"
         ],
         "canUseModerationTools": false,
-        "streak": 1239,
+        "streak": 1240,
         "streakData": {
           "currentStreak": {
-            "length": 1239,
+            "length": 1240,
             "startDate": "2022-12-24",
-            "endDate": "2026-06-16"
+            "endDate": "2026-06-17"
           }
         },
         "username": "alexis_carbillet",
@@ -168,7 +168,7 @@
         "requiresSsoLogin": false,
         "hasPhoneNumber": true,
         "shouldForceConnectPhoneNumber": false,
-        "totalXp": 152363,
+        "totalXp": 152601,
         "achievements": [],
         "_achievements": [],
         "betaStatus": "INELIGIBLE",
@@ -177,5 +177,5 @@
       }
     ]
   },
-  "fetched_at": "2026-06-17T10:26:07.843Z"
+  "fetched_at": "2026-06-17T16:01:24.361Z"
 }
