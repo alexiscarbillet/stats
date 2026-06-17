@@ -5,6 +5,10 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: {}
 
+# 1. ADD THIS: Gives the action permission to write/push to your repository branches
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -27,12 +31,13 @@ jobs:
           cd web
           npm install
 
+      # 2. Set identity globally
       - name: Set Git Identity Global
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # We build and deploy first so gh-pages can read the fresh build
+      # 3. Inject the GITHUB_TOKEN so gh-pages can authenticate
       - name: Build and Deploy frontend
         run: |
           cd web
@@ -41,7 +46,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Then we save the data files back to your main repository
       - name: Commit data back to repo
         run: |
           git add data
