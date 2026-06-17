@@ -10,28 +10,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
       - name: Run fetch script
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
         run: |
           node scripts/fetch_stats.js
+
       - name: Install frontend dependencies
         run: |
           cd web
           npm install
-      - name: Build frontend
+
+      - name: Set Git Identity Global
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # We build and deploy first so gh-pages can read the fresh build
+      - name: Build and Deploy frontend
         run: |
           cd web
           npm run build
           npm run deploy
-      - name: Commit data and site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Then we save the data files back to your main repository
+      - name: Commit data back to repo
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data .
-          git commit -m "Update stats data and site" || echo "No changes to commit"
+          git add data
+          git commit -m "Update stats data" || echo "No changes to commit"
           git push
