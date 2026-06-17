@@ -45,12 +45,11 @@ jobs:
           npm install
           npm run build
 
-      # 4. Package the built files using an absolute path so the runner never loses it
+      # 4. Look for the build folder at the absolute root of your project
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This tells GitHub exactly where to look starting from the absolute workspace root
-          path: '${{ github.workspace }}/web/dist/'
+          path: 'dist/' # 👈 Removed 'web/' entirely
 
       # 5. Direct deployment to live site
       - name: Deploy to GitHub Pages
