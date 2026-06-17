@@ -5,8 +5,11 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: {}
 
+# This tells GitHub to allow this specific workflow to deploy to Pages natively
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   fetch:
@@ -19,36 +22,35 @@ jobs:
         with:
           node-version: '22'
 
+      # 1. Fetch your data
       - name: Run fetch script
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
         run: |
           node scripts/fetch_stats.js
 
-      - name: Install frontend dependencies
-        run: |
-          cd web
-          npm install
-
-      - name: Set Git Identity Global
+      # 2. Save the fresh data files back to your main branch
+      - name: Commit data back to repo
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Build and Deploy frontend
-        run: |
-          # 1. Run the build from inside web so Vite executes, but let it output to the root dist
-          cd web
-          npm run build
-          
-          # 2. Go back to the root where the build output actually dropped
-          cd ..
-          
-          # 3. Deploy from the root './dist' folder
-          npx gh-pages -d dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-
-      - name: Commit data back to repo
-        run: |
           git add data
           git commit -m "Update stats data" || echo "No changes to commit"
           git push
+
+      # 3. Step into /web, install npm modules, and build the frontend
+      - name: Install and Build frontend
+        run: |
+          cd web
+          npm install
+          npm run build
+
+      # 4. Package the built files (Vite drops them into web/dist)
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'web/dist/'
+
+      # 5. Direct deployment to live site (No gh-pages npm tool needed!)
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
