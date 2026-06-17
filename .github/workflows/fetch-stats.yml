@@ -37,14 +37,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # 3. Inject the GITHUB_TOKEN so gh-pages can authenticate
       - name: Build and Deploy frontend
         run: |
           cd web
           npm run build
-          npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # We pass the repo URL injected with the token directly to the gh-pages CLI tool
+          npx gh-pages -d dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
       - name: Commit data back to repo
         run: |
