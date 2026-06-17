@@ -39,9 +39,10 @@ jobs:
 
       - name: Build and Deploy frontend
         run: |
-          cd web
-          npm run build
-          # Changing "-d dist" to "-d web/dist" fixes the path resolution
+          # 1. Build using prefix so it runs inside /web but keeps our terminal at the root
+          npm run build --prefix web
+          
+          # 2. Deploy passing the exact absolute path using the GitHub workspace variable
           npx gh-pages -d web/dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
       - name: Commit data back to repo
