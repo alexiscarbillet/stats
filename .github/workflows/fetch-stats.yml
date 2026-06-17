@@ -44,11 +44,16 @@ jobs:
           cd web
           npm install
           npm run build
+          echo "--- Content of web/ folder after build ---"
+          ls -la
+          echo "--- Content of project root after build ---"
+          ls -la ..
 
-      # 4. Package the built files (Providing the absolute path using $GITHUB_WORKSPACE)
+      # 4. Package the built files using whatever directory actually contains index.html
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # If 'ls' shows it dropped at the root, change this to 'dist/'
           path: 'web/dist'
 
       # 5. Direct deployment to live site
