@@ -45,12 +45,12 @@ jobs:
           npm install
           npm run build
 
-      # 4. Package the built files (Vite drops them into web/dist)
+      # 4. Package the built files (Providing the absolute path using $GITHUB_WORKSPACE)
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'web/dist/'
+          path: 'web/dist' # 👈 This points directly to your compiled frontend folder from the root
 
-      # 5. Direct deployment to live site (No gh-pages npm tool needed!)
+      # 5. Direct deployment to live site
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
