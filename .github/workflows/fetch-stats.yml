@@ -37,12 +37,16 @@ jobs:
 
       - name: Build and Deploy frontend
         run: |
+          # 1. Run the build from inside web so Vite executes, but let it output to the root dist
           cd web
           npm run build
-          # Using the absolute path ($GITHUB_WORKSPACE) ensures gh-pages finds the folder perfectly
-          npx gh-pages -d $GITHUB_WORKSPACE/web/dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          
+          # 2. Go back to the root where the build output actually dropped
+          cd ..
+          
+          # 3. Deploy from the root './dist' folder
+          npx gh-pages -d dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
-      # Finally, we save the data folder back to the main branch
       - name: Commit data back to repo
         run: |
           git add data
