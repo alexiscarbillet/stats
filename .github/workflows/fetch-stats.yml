@@ -43,18 +43,14 @@ jobs:
         run: |
           cd web
           npm install
-          npm run build
-          echo "--- Content of web/ folder after build ---"
-          ls -la
-          echo "--- Content of project root after build ---"
-          ls -la ..
+          # We force Vite to output to an unmistakable folder at the root level
+          npx vite build --outDir ../live-site-dist
 
-      # 4. Package the built files using whatever directory actually contains index.html
+      # 4. Package the built files directly from that clear folder
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # If 'ls' shows it dropped at the root, change this to 'dist/'
-          path: 'web/dist'
+          path: 'live-site-dist/'
 
       # 5. Direct deployment to live site
       - name: Deploy to GitHub Pages
