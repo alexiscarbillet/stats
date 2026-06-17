@@ -41,8 +41,8 @@ jobs:
         run: |
           cd web
           npm run build
-          # Explicitly point gh-pages to web/dist from the repository context
-          npx gh-pages -d dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          # Changing "-d dist" to "-d web/dist" fixes the path resolution
+          npx gh-pages -d web/dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
       - name: Commit data back to repo
         run: |
