@@ -38,18 +38,19 @@ jobs:
           git commit -m "Update stats data" || echo "No changes to commit"
           git push
 
-      # 3. Build the frontend by explicitly telling Vite where the index.html is
+      # 3. Step into /web, install npm modules, and build the frontend safely
       - name: Install and Build frontend
         run: |
           cd web
           npm install
-          npx vite build --root .. --outDir dist
+          npm run build
 
-      # 4. Package the built files directly from the root dist folder
+      # 4. Package the built files using an absolute path so the runner never loses it
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/'
+          # This tells GitHub exactly where to look starting from the absolute workspace root
+          path: '${{ github.workspace }}/web/dist/'
 
       # 5. Direct deployment to live site
       - name: Deploy to GitHub Pages
