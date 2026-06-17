@@ -5,7 +5,6 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: {}
 
-# 1. ADD THIS: Gives the action permission to write/push to your repository branches
 permissions:
   contents: write
 
@@ -31,7 +30,6 @@ jobs:
           cd web
           npm install
 
-      # 2. Set identity globally
       - name: Set Git Identity Global
         run: |
           git config --global user.name "github-actions[bot]"
@@ -39,12 +37,12 @@ jobs:
 
       - name: Build and Deploy frontend
         run: |
-          # 1. Build using prefix so it runs inside /web but keeps our terminal at the root
-          npm run build --prefix web
-          
-          # 2. Deploy passing the exact absolute path using the GitHub workspace variable
-          npx gh-pages -d web/dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          cd web
+          npm run build
+          # Using the absolute path ($GITHUB_WORKSPACE) ensures gh-pages finds the folder perfectly
+          npx gh-pages -d $GITHUB_WORKSPACE/web/dist -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
+      # Finally, we save the data folder back to the main branch
       - name: Commit data back to repo
         run: |
           git add data
