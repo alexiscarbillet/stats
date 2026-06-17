@@ -27,6 +27,7 @@ jobs:
         run: |
           cd web
           npm run build
+          npm run deploy
       - name: Commit data and site
         run: |
           git config user.name "github-actions[bot]"
